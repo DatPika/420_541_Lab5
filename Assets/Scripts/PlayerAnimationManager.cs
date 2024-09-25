@@ -19,10 +19,14 @@ public class PlayerAnimationManager : MonoBehaviour
       }
 
       animator.SetFloat("CharacterSpeed", movement.GetMoveSpeed());
-      animator.SetBool("IsFalling",!movement.isGrounded);
+      animator.SetBool("IsFalling", !movement.isGrounded);
       if (Input.GetButtonUp("Fire1"))
       {
-        animator.SetTrigger("doRoll");
+        animator.SetTrigger("DoRoll");
+      }
+      if (Input.GetButtonUp("Fire2"))
+      {
+        animator.SetTrigger("DoPunch");
       }
      
   }
